@@ -45,5 +45,23 @@ namespace BaiTapMaHoa
 
             return result.ToString();
         }
+
+        public static string Decrypt(string cipherText, int k)
+        {
+            var result = new StringBuilder();
+
+            //chuyển thành mảng số
+            var numberData = ConvertStringToArrayNumber(cipherText);
+
+            //giải hóa
+            foreach (var number in numberData)
+            {
+                var decode = (26 + number - k) % 26;
+                var decodeChar = MapNumberToCharacter(decode);
+                result.Append(decodeChar);
+            }
+
+            return result.ToString();
+        }
     }
 }
