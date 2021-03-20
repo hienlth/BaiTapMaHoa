@@ -28,13 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.txtK = new System.Windows.Forms.TextBox();
+            this.txtChuoiNhap = new System.Windows.Forms.TextBox();
+            this.btnMaHoa = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // txtK
+            // 
+            this.txtK.Location = new System.Drawing.Point(90, 89);
+            this.txtK.Name = "txtK";
+            this.txtK.Size = new System.Drawing.Size(100, 20);
+            this.txtK.TabIndex = 0;
+            // 
+            // txtChuoiNhap
+            // 
+            this.txtChuoiNhap.Location = new System.Drawing.Point(90, 115);
+            this.txtChuoiNhap.Name = "txtChuoiNhap";
+            this.txtChuoiNhap.Size = new System.Drawing.Size(378, 20);
+            this.txtChuoiNhap.TabIndex = 1;
+            // 
+            // btnMaHoa
+            // 
+            this.btnMaHoa.Location = new System.Drawing.Point(508, 111);
+            this.btnMaHoa.Name = "btnMaHoa";
+            this.btnMaHoa.Size = new System.Drawing.Size(75, 23);
+            this.btnMaHoa.TabIndex = 2;
+            this.btnMaHoa.Text = "Mã hóa";
+            this.btnMaHoa.UseVisualStyleBackColor = true;
+            this.btnMaHoa.Click += new System.EventHandler(this.btnMaHoa_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnMaHoa);
+            this.Controls.Add(this.txtChuoiNhap);
+            this.Controls.Add(this.txtK);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox txtK;
+        private System.Windows.Forms.TextBox txtChuoiNhap;
+        private System.Windows.Forms.Button btnMaHoa;
     }
 }
 

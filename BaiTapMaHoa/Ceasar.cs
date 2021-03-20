@@ -27,5 +27,23 @@ namespace BaiTapMaHoa
             }
             return result.ToArray();
         }
+
+        public static string Encrypt(string clearText, int k)
+        {
+            var result = new StringBuilder();
+
+            //chuyển thành mảng số
+            var numberData = ConvertStringToArrayNumber(clearText);
+
+            //mã hóa
+            foreach(var number in numberData)
+            {
+                var encode = (number + k) % 26;
+                var encodeChar = MapNumberToCharacter(encode);
+                result.Append(encodeChar);
+            }
+
+            return result.ToString();
+        }
     }
 }

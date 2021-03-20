@@ -16,5 +16,11 @@ namespace BaiTapMaHoa
         {
             InitializeComponent();
         }
+
+        private void btnMaHoa_Click(object sender, EventArgs e)
+        {
+            var chuoiDaMaHoa = Ceasar.Encrypt(txtChuoiNhap.Text, int.Parse(txtK.Text));
+            MessageBox.Show(chuoiDaMaHoa);
+        }
     }
 }
